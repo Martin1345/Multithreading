@@ -12,7 +12,8 @@ public class Wait {
                     //Aufruf eines anderen Threads benachrichtigt wird
                 } catch (InterruptedException e) {
                     System.out.println(" Thread wurde unterbrochen!");
-                    //Sollte der Thread unterbochen werden, so wird eine Fehlermeldung ausgegeben
+                    //Sollte der Thread unterbochen werden, so wird 
+                    //eine Fehlermeldung ausgegeben
                 }
                 System.out.println(" Thread 1 wurde benachrichtigt und macht weiter!");
                 // Ausgabe an den Nutzer, dass Notify aufgerufen wurde und der 
