@@ -11,18 +11,19 @@ public class Wait {
                     sperre.wait(); // Der Thread wartet, bis er durch den notify() 
                     //Aufruf eines anderen Threads benachrichtigt wird
                 } catch (InterruptedException e) {
-                    System.out.println(" Thread wurde unterbrochen!");// Sollte der Thread unterbochen werden,
-                    //so wird eine Fehlermeldung ausgegeben
+                    System.out.println(" Thread wurde unterbrochen!");
+                    //Sollte der Thread unterbochen werden, so wird eine Fehlermeldung ausgegeben
                 }
-                System.out.println(" Thread 1 wurde benachrichtigt und macht weiter!");// Ausgabe 
-                //an den Nutzer, dass Notify aufgerufen wurde und der wartende Thread weieterarbeiten kann
+                System.out.println(" Thread 1 wurde benachrichtigt und macht weiter!");
+                // Ausgabe an den Nutzer, dass Notify aufgerufen wurde und der wartende Thread weieterarbeiten kann
                 
             }
         });
 
         Thread benachrichtigerThread = new Thread(() -> {
             try {
-                Thread.sleep(2000); //Thread 2 pausiert für 2 Sekunden, um eine verzögerung zu simmulieren,
+                Thread.sleep(2000); //Thread 2 pausiert für 2 Sekunden, um eine verzögerung 
+                //zu simmulieren,
                 //erst danach wird der wartende Thread benachrichtigt
             } catch (InterruptedException e) {
                 e.printStackTrace();// Falls der Thread unterbrochen wird, 
