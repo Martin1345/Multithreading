@@ -15,7 +15,8 @@ public class Wait {
                     //Sollte der Thread unterbochen werden, so wird eine Fehlermeldung ausgegeben
                 }
                 System.out.println(" Thread 1 wurde benachrichtigt und macht weiter!");
-                // Ausgabe an den Nutzer, dass Notify aufgerufen wurde und der wartende Thread weieterarbeiten kann
+                // Ausgabe an den Nutzer, dass Notify aufgerufen wurde und der 
+                //wartende Thread weieterarbeiten kann
                 
             }
         });
