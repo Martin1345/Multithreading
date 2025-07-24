@@ -4,7 +4,8 @@ public class Wait {
     public static void main(String[] args) {
         Thread wartender_Thread = new Thread(() -> {
             synchronized (sperre) {// Snchroninsation mit sperre 
-                System.out.println(" Thread 1 wartet...");// Ausgabe, dass der wartende Thread 
+                System.out.println(" Thread 1 wartet...");
+                //Ausgabe, dass der wartende Thread 
                 //ausführbar wäre
                 try {
                     sperre.wait(); // Der Thread wartet, bis er durch den notify() 
