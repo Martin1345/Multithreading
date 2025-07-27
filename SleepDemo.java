@@ -7,7 +7,7 @@ public class SleepDemo {//Klasse zur Demonstration von Thread.sleep()
             //Threads ausgegeben
 
             try {
-                Thread.sleep(1000); // Thread schläft für 1000 Millisekunden (1 Sekunde)
+                Thread.sleep(1000); // Thread schläft für 1000 Millisekunden 
             } catch (InterruptedException e) {
                 System.out.println(" Der Schlaf wurde unterbrochen.");// Falls der Thread während des Schlafens unterbrochen wird, 
                 //wird eine Fehlermeldung ausgegeben
