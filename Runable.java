@@ -1,11 +1,11 @@
 package com.multithreading.examples;
 
-public class Runable {//Klasse zur Demonstration von Runnable in Java
+public class Runnable {//Klasse zur Demonstration von Runnable in Java
 
     public static void main(String[] args) {
 
         Runnable aufgabe1 = () -> {//Erstellung eines ersten Runnable-Objektes
-            for (int i = 1; i <= 5; i++) {//Runabele führt eine Schleife von 1 bis 5 aus
+            for (int i = 1; i <= 5; i++) {//Runnable führt eine Schleife von 1 bis 5 aus
                 System.out.println(" Thread 1 Schritt " + i);// Rückgabe des aktuellen schrittes von Thread 1
                
             }
