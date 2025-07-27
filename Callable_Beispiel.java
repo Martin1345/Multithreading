@@ -1,13 +1,13 @@
 import java.util.concurrent.Callable;// Importierung der Klasse Callable
 import java.util.concurrent.ExecutorService;// Importierung der Klasse ExecutorService
-import java.util.concurrent.Executors;// Importierung der Klasse Executors
+import java.util.concurrent.Executors;// Importierung der Klasse Executor
 import java.util.concurrent.Future;// Importierung der Klasse Future
 
 public class Callable_Beispiel {// Klasse zur Demonstration der Verwendung von Callable
     public static void main(String[] args) {
         
         ExecutorService executor = Executors.newSingleThreadExecutor();//Erstellung eines Threadpools, 
-        //der nur einen Thread verwaltet.
+        //der nur einen Thread verwaltet
 
         Callable<Integer> aufgabe = () -> {// Definition der Aufgabe, 
             //die auf dem Thread ausgeführt wird
@@ -15,14 +15,14 @@ public class Callable_Beispiel {// Klasse zur Demonstration der Verwendung von C
             //gearbeitet wird
             Thread.sleep(500); // Simulation einer Rechenzeit von 500 
             //Millisekunden durch den Thread
-            return zahl * 2;   // Durchführung der Aufgabe(Verdoppeln der Zahl)
+            return zahl * 2;   // Durchführung der Aufgabe (verdoppeln der Zahl)
             //und Rückgabe des Ergebnisses
         };
 
         try {
             // Weitergabe der Aufgabe an den Executor, der diese an den Thread weitergibt.
             Future<Integer> ergebnis = executor.submit(aufgabe);//Der Executor führt 
-            //die Aufgabe asynchron aus und gibt ein Future-Objekt zurück
+            //die Aufgabe synchron aus und gibt ein Future-Objekt zurück
 
             System.out.println("Ergebnis: " + ergebnis.get());//Abruf des Ergebnisses der Aufgabe, 
             //erst möglich, wenn Berechnung abgeschlossen ist
