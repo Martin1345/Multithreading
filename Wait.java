@@ -3,7 +3,7 @@ public class Wait {
 
     public static void main(String[] args) {
         Thread wartender_Thread = new Thread(() -> {
-            synchronized (sperre) {// Snchroninsation mit sperre 
+            synchronized (sperre) {// Synchroninsation mit sperre 
                 System.out.println(" Thread 1 wartet...");
                 //Ausgabe, dass der wartende Thread 
                 //ausführbar wäre
@@ -12,20 +12,20 @@ public class Wait {
                     //Aufruf eines anderen Threads benachrichtigt wird
                 } catch (InterruptedException e) {
                     System.out.println(" Thread wurde unterbrochen!");
-                    //Sollte der Thread unterbochen werden, so wird 
+                    //Sollte der Thread unterbrochen werden, so wird 
                     //eine Fehlermeldung ausgegeben
                 }
                 System.out.println(" Thread 1 wurde benachrichtigt und macht weiter!");
-                // Ausgabe an den Nutzer, dass Notify aufgerufen wurde und der 
-                //wartende Thread weieterarbeiten kann
+                // Ausgabe an den Nutzer, dass notify aufgerufen wurde und der 
+                //wartende Thread weiterarbeiten kann
                 
             }
         });
 
         Thread benachrichtigerThread = new Thread(() -> {
             try {
-                Thread.sleep(2000); //Thread 2 pausiert für 2 Sekunden, um eine verzögerung 
-                //zu simmulieren,
+                Thread.sleep(2000); //Thread 2 pausiert für 2 Sekunden, um eine Verzögerung 
+                //zu simulieren,
                 //erst danach wird der wartende Thread benachrichtigt
             } catch (InterruptedException e) {
                 e.printStackTrace();// Falls der Thread unterbrochen wird, 
@@ -35,7 +35,7 @@ public class Wait {
             synchronized (sperre) {
                 System.out.println(" Thread 2 benachrichtigt...");// Ausgabe an den Nutzer, 
                 //dass der benachrichtigende 
-                //Thread nun Notify aufruft
+                //Thread nun notify aufruft
                 sperre.notify(); // Aufruf von notify() auf dem sperre Objekt, 
                 //um den wartenden Thread zu benachrichtigen
             }
